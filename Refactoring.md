@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+- If the input event is falsy we already have got enough information to return a value. Which is the default value. So there's no point on checking other validations or letting the code execute further.
+
+- If `event.partitionKey` is falsy, again we have got already enough information to make a decision on return value. No point on going further.
+
+- `candidate.length > MAX_PARTITION_KEY_LENGTH` validation logic, we could easily break it into a seperate function. It moves a part of the cognitive compexity away from the main function.
+
+- There are some additional comments I've put in the code.

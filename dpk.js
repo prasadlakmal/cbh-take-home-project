@@ -46,8 +46,8 @@ function lengthValidatedKey(key) {
 //   }
 
 //   if (candidate) { // This if is always true when `event` is truthy
-//     if (typeof candidate !== "string") {
-//       candidate = JSON.stringify(candidate);
+//     if (typeof candidate !== "string") { 
+//       candidate = JSON.stringify(candidate); // This is a dead code if flow goes to the `else` part in previous nested if.
 //     }
 //   } else {
 //     candidate = TRIVIAL_PARTITION_KEY; // If event is falsy this value could have returned straight away, because this is the shortast path.
